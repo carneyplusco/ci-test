@@ -1,0 +1,40 @@
+.article-list {
+  &__section-number {
+    position: absolute;
+  }
+  &.-participants {
+    margin-bottom: $base-spacing;
+  }
+}
+
+.article-item {
+  margin-left: 50px;
+  margin-bottom: $base-spacing;
+
+  &__date {
+    margin-bottom: $base-spacing;
+  }
+
+  .moretag {
+    text-transform: uppercase;
+  }
+
+  &.international {
+    .article-item__author, .label {
+      text-transform: uppercase;
+    }
+    .entry-summary {
+      margin-top: $small-spacing;
+    }
+  }
+}
+
+.article-image, .article-link {
+  margin-left: 50px;
+}
+
+.article-image {
+  figure {
+    margin-bottom: 0;
+  }
+}

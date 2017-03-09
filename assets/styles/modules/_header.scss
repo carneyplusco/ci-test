@@ -1,0 +1,27 @@
+header {
+  .logotype {
+    @include span-columns(2);
+    @include media($large) {
+      @include span-columns(3);
+    }
+    @include media($small) {
+      @include span-columns(3);
+    }
+    @include media($extra-small) {
+      @include span-columns(6);
+      margin-bottom: $base-spacing;
+    }
+  }
+  .logo-address {
+    display: none;
+    @include media($small) {
+      @include span-columns(3);
+    }
+    @include media($extra-small) {
+      @include span-columns(6);
+    }
+    [itemprop="telephone"], [property="telephone"] {
+      speak: spell-out;
+    }
+  }
+}

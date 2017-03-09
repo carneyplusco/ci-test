@@ -1,0 +1,22 @@
+.page-header {
+  margin-bottom: $base-spacing;
+  overflow: hidden;
+  &__title {
+    display: inline-block;
+    &.underline {
+      margin-bottom: $small-spacing;
+      a, .page-title {
+        @extend %dash-underline;
+        padding-bottom: 0.875em;
+      }
+    }
+    a, .page-title {
+      margin-left: 50px;
+      text-transform: uppercase;
+    }
+  }
+  &__back-button {
+    float: right;
+    text-transform: uppercase;
+  }
+}

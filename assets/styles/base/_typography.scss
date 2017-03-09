@@ -1,0 +1,151 @@
+// BASE TYPOGRAPHY STYLES
+////////////////////////////////////////////////////////////////////////////////
+
+body {
+  @include font-smoothing(on);
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 600;
+  line-height: $base-line-height;
+  &.ci2008 {
+    background-image: url('../images/blue-texture.png');
+  }
+  &.ci2013 {
+    background-image: url('../images/ci2013-bg.jpg');
+    background-size: cover;
+    @include media($small) {
+      background-size: contain;
+      background-repeat: repeat-y;
+    }
+  }
+  &#tinymce {
+    background-image: none;
+  }
+}
+
+.accent-text {
+  font-family: $accent-font-family;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 1em;
+  font-family: $base-font-family;
+  font-weight: 600;
+  // text-transform: uppercase;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+p {
+  margin: 0 0 $base-spacing 0;
+}
+
+a {
+  transition: color, 0.2s;
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+    text-decoration: underline;
+  }
+
+  &:active,
+  // &:focus
+  {
+    color: $hover-link-color;
+  }
+
+  &:focus {
+    // outline: 2px solid $red;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+
+  &.large {
+    margin: $large-spacing 0;
+  }
+}
+
+figure {
+  margin: 0 0 $base-spacing 0;
+  max-width: 100%;
+  img {
+    height: auto;
+  }
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+pre {
+  margin: 0;
+  background: rgba($teal, .25);
+  display: inline;
+}
+
+blockquote {
+  font-family: $accent-font-family;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0 0 ($base-spacing / 2);
+  padding: 0 $base-spacing;
+}
+
+cite {
+  font-style: italic;
+}
+
+// Alternate section colors
+////////////////////////////////////////////////////////////////////////////////
+%inverse {
+  color: $inverse-font-color;
+
+  a {
+    color: $action-color;
+
+    &:hover {
+      color: $action-hover-color;
+    }
+
+    &:active, &:focus {
+      color: $action-hover-color;
+      outline: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $inverse-font-color;
+  }
+
+  pre {
+    border-color: $inverse-font-color;
+  }
+
+  hr {
+    border-color: rgba(#fff, .25);
+  }
+
+}

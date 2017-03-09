@@ -1,0 +1,74 @@
+@include media($extra-large) {
+  body {
+    &.home .main { @include shift(2); }
+  }
+}
+
+// iPad landscape & Desktop
+@include media($large) {
+  body {
+    // .logotype { @include span-columns(3); }
+    &.home .main { @include shift(3); }
+  }
+}
+
+// iPad portrait
+@include media($medium) {}
+
+// iPhone landscape
+@include media($small) {
+  body {
+    // .logotype { @include span-columns(3); }
+
+    &.home .main { @include shift(0); }
+    .main {
+      @include shift(0);
+      @include span-columns(6);
+    }
+  }
+}
+
+// iPhone portrait
+@include media($extra-small) {
+  body {
+    font-size: 0.75em;
+    .logotype { margin-right: 0; }
+    // .logo-address { width: 55%; }
+
+    .main {
+      @include span-columns(6);
+
+      article {
+        aside { @include span-columns(1); }
+        section { @include span-columns(5); }
+      }
+
+      form {
+        .icon {
+          @include span-columns(1);
+
+          .icon-search {
+            height: 1.4ch;      // Magic
+          }
+        }
+      }
+    }
+
+    &.home form .icon {
+      margin-right: 0;
+      width: 40px;      // Magic
+    }
+
+    #ajax-results .icon {
+      @include span-columns(1);
+    }
+
+    // .section-number {
+    //   @include span-columns(1);
+    // }
+
+    .title-underline {
+      @include shift(1);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.icon-c {
+  background: url('../images/CI5718/ci-c.svg') no-repeat top;
+}
+.icon-i {
+  background: url('../images/CI5718/ci-i.svg') no-repeat top;
+}
+.icon-5 {
+  background: url('../images/CI5718/ci-5.svg') no-repeat top;
+}
+.icon-7 {
+  background: url('../images/CI5718/ci-7.svg') no-repeat top;
+}
+.icon-1 {
+  background: url('../images/CI5718/ci-1.svg') no-repeat top;
+}
+.icon-8 {
+  background: url('../images/CI5718/ci-8.svg') no-repeat top;
+}
+
+.home {
+  // .icon {
+  //   margin-right: 0;
+  //   padding-top: 0.2rem;
+  //   width: 48px;
+  // }
+
+  .search-form {
+    float: left;
+    @include media($extra-small) {
+      float: none;
+    }
+  }
+}

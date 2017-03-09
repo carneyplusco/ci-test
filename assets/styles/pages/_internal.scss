@@ -1,0 +1,91 @@
+// break into separate files eventually. I'm just bad at things right now
+
+.back-button { float: right; }
+
+div.wrap.container {
+  background: white;
+  display: flex;
+  margin: 3rem;
+  min-height: 90vh;
+  padding: 3em;
+  @include media($extra-small) {
+    margin: 2em;
+  }
+}
+
+div.content.row { width: 100%; }
+
+
+main {
+  @include span-columns(9);
+
+  article {
+
+    aside {
+      @include span-columns(1);
+    }
+
+    img:hover { cursor: pointer; }
+
+    section {
+      @include span-columns(11);
+
+      .entry-summary { margin-top: 0; }
+      .entry-title { margin-bottom: 0; }
+    }
+  }
+
+  & > header { margin-bottom: 5%; }
+
+}
+
+.home {
+  .logo-address { display: inline-block; }
+}
+
+// .programs article { padding-left: 8.7613%; }
+
+.section-number {
+  position: absolute;
+}
+
+.reading {
+  margin-bottom: $base-spacing;
+}
+
+.past-events {
+  margin-left: 50px;
+  text-transform: uppercase;
+}
+
+.title-underline {
+  @include shift(1);
+  // @include shift(0.5);
+  @include span-columns(5);
+  margin-bottom: 2ch;
+  position: relative;
+  display: none;
+}
+
+// From https://codex.wordpress.org/CSS
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	clip: auto !important;
+	color: inherit;
+	background-color: inherit;
+	display: inline-block;
+	height: auto;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.featherlight-close-icon {
+  border: none;
+}

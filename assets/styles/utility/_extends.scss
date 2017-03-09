@@ -1,0 +1,30 @@
+// @EXTENDS
+////////////////////////////////////////////////////////////////////////////////
+
+%dash-underline {
+  background-image: linear-gradient(to right, #333 70%, rgba(255,255,255,0) 0%);
+  background-position: 2px bottom;
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+}
+
+%pdf-link {
+  content: url('../images/ci-document.svg');
+  display: inline-block;
+  width: 10px;
+  margin-left: 0.25em;
+  vertical-align: text-bottom;
+  line-height: 12px;
+  @include media($extra-small) {
+    width: 8px;
+  }
+}
+
+%square-bullet {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: $medium-dark-gray;
+  vertical-align: 2px;
+}

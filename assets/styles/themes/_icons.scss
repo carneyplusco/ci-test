@@ -1,0 +1,60 @@
+#ajax-results {
+  .icon-loop:after {
+    content: url('../images/ci-loop.svg');
+    display: inline-block;
+    width: 12px;
+  }
+
+  &:hover { cursor: pointer; }
+}
+
+body.home {
+  .content {
+    background-position: center;
+    background-size: 90% 90%;
+  }
+}
+
+.external-link-arrow:after {
+  content: url('../images/ci-arrow-external.svg');
+  display: inline-block;
+  width: 9px;
+}
+
+// .icon {
+//   @include span-columns(1);
+//   padding-top: 0.22rem;
+//
+//   &:before { content: none; }
+// }
+
+.icon-search:after {
+  content: url('../images/ci-search.svg');
+  display: inline-block;
+  width: 10px;
+  margin-top: 3px;
+  @include media($extra-small) {
+    width: 8px;
+  }
+}
+
+.up-arrow:after {
+  content: url('../images/ci-arrow-up.svg');
+  display: inline-block;
+  width: 10px;
+
+}
+
+.external-link:after {
+  content: url('../images/ci-arrow-external.svg');
+  display: inline-block;
+  width: 8px;
+  margin-left: 0.5em;
+  @include media($extra-small) {
+    width: 6px;
+  }
+}
+
+.icon-document:after, .pdf-link:after {
+  @extend %pdf-link;
+}

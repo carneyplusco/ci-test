@@ -1,0 +1,5 @@
+// for use in side navigations of different styles
+
+.sidebar {
+  @include span-columns(2);
+}

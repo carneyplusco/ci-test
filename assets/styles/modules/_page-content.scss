@@ -1,0 +1,12 @@
+.page-content {
+  position: relative;
+  @include span-columns(10);
+
+  @include media($extra-small) {
+    @include span-columns(6);
+  }
+
+  &__body {
+    margin-left: 50px;
+  }
+}

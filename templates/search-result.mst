@@ -1,0 +1,14 @@
+{{ #search_results }}
+  <div class="article-item international">
+    <h2 class="article-item__author">{{ title }}</h2>
+    <span class="label">Internationals:</span>
+    <ul class="entry-summary">
+      {{ #internationals }}
+        <li>
+          <span class="international__name">{{ name }}</span>
+          <p><span class="label">Role(s)</span>: {{ international_roles }}</p>
+        </li>
+      {{ /internationals }}
+    </ul>
+  </div>
+{{ /search_results }}
