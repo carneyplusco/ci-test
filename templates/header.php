@@ -1,6 +1,6 @@
 <header>
   <span class="logotype">
-    <a href="/" aria-label="Carnegie International, 57th edition, 2018">Carnegie <i>Int'l</i>, <br>57th ed., 2018</a>
+    <a href="/" aria-label="Carnegie International 57th edition, 2018">Carnegie <i>Int’l</i> <br>57th ed., 2018</a>
   </span>
   <span class="logo-address" vocab="http://schema.org/" typeof="PostalAddress">
     <p>
