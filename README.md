@@ -99,7 +99,7 @@ You now have all the necessary dependencies to run the build process.
   }
 ...
 ```
-If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:
+~~If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:~~
 
 ```json
 ...
