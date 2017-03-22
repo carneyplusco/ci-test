@@ -1,0 +1,48 @@
+/*
+	This font software is the property of Commercial Type.
+
+	You may not modify the font software, use it on another website, or install it on a computer.
+
+	License information is available at http://commercialtype.com/eula
+	For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	Copyright (C) 2016 Schwartzco Inc.
+
+*/
+
+
+	.ProduktTypewriterWeb-Regular {
+	font-family: "Produkt Typewriter Web";
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+	.ProduktTypewriterWeb-RegularItalic {
+	font-family: "Produkt Typewriter Web";
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	}
+
+	@font-face {
+	font-family: "Produkt Typewriter Web";
+	src: url("ProduktTypewriterWeb-Regular.eot");
+	src: url("ProduktTypewriterWeb-Regular.eot?#iefix") format("embedded-opentype"),
+	url("ProduktTypewriterWeb-Regular.woff2") format("woff2"),
+	url("ProduktTypewriterWeb-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	}
+
+	@font-face {
+	font-family: "Produkt Typewriter Web";
+	src: url("ProduktTypewriterWeb-RegularItalic.eot");
+	src: url("ProduktTypewriterWeb-RegularItalic.eot?#iefix") format("embedded-opentype"),
+	url("ProduktTypewriterWeb-RegularItalic.woff2") format("woff2"),
+	url("ProduktTypewriterWeb-RegularItalic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
+	}

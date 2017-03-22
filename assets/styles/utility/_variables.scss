@@ -3,8 +3,7 @@
 
 // Typography
 $helvetica: 'Helvetica', sans-serif;
-// base-font-family will need to be changed to "Produkt Typewriter" before production
-$base-font-family: 'Inconsolata', monospace;
+$base-font-family: 'Produkt Typewriter Web', monospace;
 $alt-font-family: 'Franklin Gothic FS', $helvetica;
 $accent-font-family: 'PT Serif', serif;
 $header-font-family: $alt-font-family;
@@ -13,7 +12,7 @@ $header-font-family: $alt-font-family;
 $base-font-size: 1em;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.35;
 $header-line-height: 1.25;
 
 // Other Sizes

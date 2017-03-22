@@ -2,13 +2,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 body {
-  @include font-smoothing(on);
-  background-color: $base-background-color;
-  color: $base-font-color;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  font-weight: 600;
-  line-height: $base-line-height;
+    @include font-smoothing(on);
+    background-color: $base-background-color;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: 400;
+    line-height: $base-line-height;
+    -moz-font-feature-settings: 'liga', 'kern';
+    -moz-font-feature-settings:'liga=1, kern=1';
+    -ms-font-feature-settings:'liga', 'kern';
+    -o-font-feature-settings:'liga', 'kern';
+    -webkit-font-feature-settings:'liga', 'kern';
+    font-feature-settings: 'liga', 'kern';
   &.ci2008 {
     background-image: url('../images/blue-texture.png');
   }
@@ -17,7 +23,7 @@ body {
     background-size: cover;
     @include media($small) {
       background-size: contain;
-      background-repeat: repeat-y;
+      background-attachment: fixed;
     }
   }
   &#tinymce {
@@ -40,7 +46,7 @@ h6 {
   font-size: 1em;
   font-family: $base-font-family;
   font-weight: 600;
-  // text-transform: uppercase;
+  text-transform: uppercase;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 

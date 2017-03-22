@@ -2,7 +2,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
-// @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
 
 @font-face {
 	font-family: 'Franklin Gothic FS';
@@ -26,4 +25,26 @@
 		url('../fonts/franklingothic-demi-webfont.svg#FranklinGothicFS-Demi') format('svg');
 	font-weight: 700;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Produkt Typewriter Web";
+	src: url("../fonts/ProduktTypewriterWeb-Regular.eot");
+	src: url("../fonts/ProduktTypewriterWeb-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/ProduktTypewriterWeb-Regular.woff2") format("woff2"),
+		url("../fonts/ProduktTypewriterWeb-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: "Produkt Typewriter Web";
+	src: url("../fonts/ProduktTypewriterWeb-RegularItalic.eot");
+	src: url("../fonts/ProduktTypewriterWeb-RegularItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/ProduktTypewriterWeb-RegularItalic.woff2") format("woff2"),
+		url("../fonts/ProduktTypewriterWeb-RegularItalic.woff") format("woff");
+	font-weight: 400;
+	font-style: italic;
+	font-stretch: normal;
 }
