@@ -29,6 +29,7 @@ header {
 
   .logo-address {
     display: none;
+    margin-bottom: 3.5em;
     @include media($small) {
       @include span-columns(3);
     }
