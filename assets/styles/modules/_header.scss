@@ -12,6 +12,21 @@ header {
       margin-bottom: $base-spacing;
     }
   }
+
+  .logotype a {
+    color: $base-font-color;
+
+    &:hover {
+      color: $action-color;
+      text-decoration: none;
+    }
+
+    &:active, &:focus {
+      color: $action-color;
+      outline: none;
+    }
+}
+
   .logo-address {
     display: none;
     @include media($small) {
