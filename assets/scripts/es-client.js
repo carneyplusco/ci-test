@@ -1,6 +1,14 @@
 import Mustache from 'mustache';
+import moment from 'moment';
+import exhibition_dates from './exhibition_dates';
 
 const Party = (function($) {
+
+  // convert exhibition dates into moment objects
+  var exhibitions = exhibition_dates.map(({ id, name, date }) => {
+    return { id, name, date: moment(date, 'MM/DD/YYYY') };
+  });
+
   var results_limit = 10;
   var current_result_index = 0;
   var result_template;
@@ -45,10 +53,20 @@ const Party = (function($) {
       var data = {
         search_results: results.map(result => {
           var { id, internationals, name: title } = result._source;
+          internationals = internationals.sort((a, b) => a.irn - b.irn);
           return { id, internationals, title };
         }),
         international_roles: function() {
           return this.roles.join(', ')
+        },
+        international_date: function() {
+          var exhibition = exhibitions.find(exhibition => exhibition.id == this.irn);
+          if(exhibition) {
+            return exhibition.date.format('MMM. Do, YYYY');
+          }
+          else {
+            return '';
+          }
         }
       };
       var rendered = Mustache.render(result_template, data);
@@ -71,19 +89,42 @@ const Party = (function($) {
 
   function search(client, query) {
     // query names of artist, exhibition, and role of participant
-    console.log(client);
+    var query_obj = {
+      query: {
+        "multi_match": {
+          "query": query,
+          "type": "phrase_prefix",
+          "fields": ["name", "internationals.name", "internationals.roles"]
+        }
+      },
+      sort : {
+        "name": "asc"
+      }
+    };
+
+    // query by exhibition year if one matches the search
+    var exhibition_year = exhibitions.find(exhibition => exhibition.date.format('YYYY') == query);
+    if(exhibition_year) {
+      query_obj = {
+        query: {
+          "bool": {
+            "must": {
+              "match": {
+                "internationals.irn": exhibition_year.id
+              }
+            }
+          }
+        },
+        sort : {
+          "name": "asc"
+        }
+      };
+    }
+
     client.search({
       index: 'party',
       type: 'record',
-      body: {
-        query: {
-          "multi_match": {
-            "query": query,
-            "fields": ["name", "internationals.name", "internationals.roles"]
-          }
-        }
-      },
-      // PAGINATION OPTIONS
+      body: query_obj,
       size: results_limit,
       from: current_result_index
     }).then(function (resp) {

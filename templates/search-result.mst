@@ -5,7 +5,7 @@
     <ul class="entry-summary">
       {{ #internationals }}
         <li>
-          <span class="international__name">{{ name }}</span>
+          <span class="international__name">{{ name }}; {{ international_date }}</span>
           <p><span class="label">Role(s)</span>: {{ international_roles }}</p>
         </li>
       {{ /internationals }}
