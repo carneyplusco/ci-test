@@ -56,12 +56,25 @@ p {
 
 a {
   transition: color, 0.2s;
-  color: $base-link-color;
+  position: relative;
   text-decoration: none;
+  color: $base-link-color;
+  padding-bottom: 2px;
 
   &:hover {
     color: $hover-link-color;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: $hover-link-color;
+    background: linear-gradient(left,$hover-link-color 100%);
   }
 
   &:active,
