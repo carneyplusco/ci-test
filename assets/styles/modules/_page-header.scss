@@ -3,16 +3,11 @@
   overflow: hidden;
   &__title {
     display: inline-block;
+    margin-left: 50px;
     &.underline {
       margin-bottom: $small-spacing;
-      a, .page-title {
-        @extend %dash-underline;
-        padding-bottom: 0.875em;
-      }
-    }
-    a, .page-title {
-      margin-left: 50px;
-      text-transform: uppercase;
+      @extend %dash-underline;
+      padding-bottom: 0.875em;
     }
   }
   &__back-button {

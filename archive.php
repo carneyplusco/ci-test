@@ -6,7 +6,7 @@
 
 <section class="page-header">
   <span class="section-number"><?= $category_number ?>.</span>
-  <h1 class="page-header__title underline"><?php the_category(' ') ?></h1>
+  <h1 class="page-header__title underline"><?php single_cat_title(' ') ?></h1>
   <a class="page-header__back-button" href="<?= Extras\back_link() ?>" aria-label="Go back to previous page" tabindex="0">Back</a>
 </section>
 
