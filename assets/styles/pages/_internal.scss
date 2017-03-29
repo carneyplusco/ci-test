@@ -63,11 +63,20 @@ main {
 }
 
 .programs .article-item {
-    margin-bottom: $extra-large-spacing;
+  margin-bottom: $extra-large-spacing;
 }
 
+.tam-oshanter-drawings h3 {
+  margin: 0;
+}
+
+
 .about h2 {
-    margin: 0 0 $small-spacing 0;
+  margin: 0 0 $small-spacing 0;
+}
+
+.participants #search-field {
+  margin-left: -4px;
 }
 
 .title-underline {
