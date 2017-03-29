@@ -53,9 +53,21 @@ main {
   margin-bottom: $base-spacing;
 }
 
+.reading a {
+  text-transform: uppercase;
+}
+
 .past-events {
   margin-left: 50px;
   text-transform: uppercase;
+}
+
+.programs .article-item {
+    margin-bottom: $extra-large-spacing;
+}
+
+.about h2 {
+    margin: 0 0 $small-spacing 0;
 }
 
 .title-underline {
