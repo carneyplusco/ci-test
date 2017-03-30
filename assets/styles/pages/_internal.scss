@@ -66,7 +66,7 @@ main {
   margin-bottom: $extra-large-spacing;
 }
 
-.tam-oshanter-drawings h3 {
+.article-item h3.article-item__title {
   margin: 0;
 }
 
@@ -86,6 +86,20 @@ main {
   margin-bottom: 2ch;
   position: relative;
   display: none;
+}
+
+
+.download {
+  margin-bottom: $base-spacing;
+  position: relative;
+  left: -50px;
+}
+
+.download .link-download {
+  background-color: white;
+  margin-left: 40px;
+  position: absolute;
+  width: 100%;
 }
 
 // From https://codex.wordpress.org/CSS

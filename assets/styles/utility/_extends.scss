@@ -12,8 +12,7 @@
   content: url('../images/ci-document.svg');
   display: inline-block;
   width: 10px;
-  margin-left: 0.25em;
-  vertical-align: text-bottom;
+  vertical-align: text-middle;
   line-height: 12px;
   @include media($extra-small) {
     width: 8px;
