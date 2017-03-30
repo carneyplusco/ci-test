@@ -55,6 +55,6 @@ body.home {
   }
 }
 
-.icon-document:after, .pdf-link:after {
+.icon-document:after, .pdf-link:before, .pdf:before {
   @extend %pdf-link;
 }

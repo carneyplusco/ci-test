@@ -53,9 +53,30 @@ main {
   margin-bottom: $base-spacing;
 }
 
+.reading a {
+  text-transform: uppercase;
+}
+
 .past-events {
   margin-left: 50px;
   text-transform: uppercase;
+}
+
+.programs .article-item {
+  margin-bottom: $extra-large-spacing;
+}
+
+.article-item h3.article-item__title {
+  margin: 0;
+}
+
+
+.about h2 {
+  margin: 0 0 $small-spacing 0;
+}
+
+.participants #search-field {
+  margin-left: -4px;
 }
 
 .title-underline {
@@ -65,6 +86,19 @@ main {
   margin-bottom: 2ch;
   position: relative;
   display: none;
+}
+
+.download {
+  margin-bottom: $base-spacing;
+  position: relative;
+  left: -50px;
+}
+
+.download .link-download {
+  background-color: white;
+  margin-left: 40px;
+  position: absolute;
+  width: 100%;
 }
 
 // From https://codex.wordpress.org/CSS
