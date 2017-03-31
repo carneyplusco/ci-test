@@ -18,6 +18,7 @@ div.content.row { width: 100%; }
 
 
 main {
+  position: relative;
   @include span-columns(9);
 
   article {

@@ -40,8 +40,9 @@ import Party from './es-client';
 
         $('.mobile-nav-link').click(function(e) {
           e.preventDefault();
-          $('.mobile-nav').toggleClass('open');
-          $('.main-footer').toggle(!$('.mobile-nav').is('.open'));
+          $(this).toggleClass('open');
+          $('.mobile-nav').toggle($(this).is('.open'));
+          $('.main-footer').toggle(!$(this).is('.open'));
         })
 
         $('figure a').featherlight({

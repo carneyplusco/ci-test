@@ -39,8 +39,22 @@
   top: 2em;
   right: 2em;
   text-transform: uppercase;
+
+  &:after {
+    content: "☰";
+    display: inline-block;
+    width: 10px;
+  }
+
   @include media($extra-small) {
     display: block;
+  }
+
+  &.open:after {
+    content: "×";
+    font-size: 1.75em;
+    line-height: 10px;
+    vertical-align: -3px;
   }
 }
 
@@ -53,8 +67,5 @@
   z-index: 999;
   nav {
     @include shift(2.5);
-  }
-  &.open {
-    display: block;
   }
 }
