@@ -8,4 +8,5 @@
 
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', 'participants'); ?>
+  <?php get_template_part('templates/nav','page') ?>
 <?php endwhile; ?>

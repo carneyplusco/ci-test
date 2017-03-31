@@ -25,3 +25,5 @@
     <?php endwhile; ?>
   </div>
 </section>
+
+<?php get_template_part('templates/nav','page') ?>

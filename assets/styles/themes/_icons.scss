@@ -32,17 +32,24 @@ body.home {
   content: url('../images/ci-search.svg');
   display: inline-block;
   width: 10px;
-  margin-top: 3px;
   @include media($extra-small) {
     width: 8px;
   }
 }
 
-.up-arrow:after {
+.up-arrow:after, .left-arrow:after, .right-arrow:after {
   content: url('../images/ci-arrow-up.svg');
   display: inline-block;
   width: 10px;
 
+}
+
+.left-arrow:after {
+  @include transform(rotateZ(-90deg));
+}
+
+.right-arrow:after {
+  @include transform(rotateZ(90deg));
 }
 
 .external-link:after {

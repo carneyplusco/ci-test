@@ -10,4 +10,6 @@
   <section class="page-content">
     <?php get_template_part('templates/content', 'programs'); ?>
   </section>
+
+  <?php get_template_part('templates/nav','page') ?>
 <?php endwhile; ?>
