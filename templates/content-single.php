@@ -21,9 +21,28 @@
       <div class="entry-content">
         <?php the_content(); ?>
       </div>
-      <footer>Pagination?
-        <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-      </footer>
     </article>
   </section>
+
+  <footer class="post-nav">
+    <?php
+      $prev_link = get_previous_post_link('%link', 'Previous', true);
+      $next_link = get_next_post_link('%link', 'Next', true);
+    ?>
+    <?php if($prev_link): ?>
+      <div class="post-nav__link">
+        <span class="section-number"><i class="left-arrow"></i></span>
+        <span class="post-nav__link -previous"><?= $prev_link ?></span>
+      </div>
+    <?php endif; ?>
+
+    <?php if($next_link): ?>
+      <div class="post-nav__link">
+        <span class="section-number"><i class="right-arrow"></i></span>
+        <span class="post-nav__link -previous"><?= $next_link ?></span>
+      </div>
+    <?php endif; ?>
+  </footer>
+
+  <?php get_template_part('templates/nav','page') ?>
 <?php endwhile; ?>

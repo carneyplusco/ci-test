@@ -13,3 +13,19 @@
     }
   }
 }
+
+.post-nav {
+  clear: both;
+  &__link {
+    position: relative;
+    &.-previous, &.-next {
+      margin-left: 50px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.page-nav {
+  padding-top: $medium-spacing;
+  clear: both;
+}

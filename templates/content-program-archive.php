@@ -13,6 +13,7 @@
       $args = array(
         'post_type'   => 'program',
         'post_status' => 'publish',
+        'posts_per_page' => -1,
         'order'       => 'asc',
         'tax_query'   => [
           [

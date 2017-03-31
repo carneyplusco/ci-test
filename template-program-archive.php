@@ -15,3 +15,5 @@ use Roots\Sage\Extras;
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/content', 'program-archive'); ?>
 <?php endwhile; ?>
+
+<?php get_template_part('templates/nav','page') ?>
