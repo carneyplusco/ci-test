@@ -9,7 +9,8 @@ div.wrap.container {
   min-height: 90vh;
   padding: 3em;
   @include media($extra-small) {
-    margin: 2em;
+    margin: 0;
+    padding: 2em;
   }
 }
 

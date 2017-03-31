@@ -11,6 +11,10 @@
     margin-bottom: $base-spacing;
   }
 
+  @include media($extra-small) {
+    margin-bottom: 0;
+  }
+
   .container {
     overflow: hidden;
   }
