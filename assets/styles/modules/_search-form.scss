@@ -1,18 +1,19 @@
 .search-form {
-  margin-left: 54px;
+  margin-left: 50px;
   max-width: 50%;
   @include media($small) {
     max-width: none;
   }
-  @include media($extra-small) {
-    margin-left: 39px;
-  }
 }
 
-#search-field:focus::-webkit-input-placeholder {
+.mobile-nav .search-form {
+  margin-left: 39px;
+}
+
+input[type="search"]:focus::-webkit-input-placeholder {
     color:transparent;
 }
-#search-field:focus::-moz-placeholder {
+input[type="search"]:focus::-moz-placeholder {
     color:transparent;
 }
 
