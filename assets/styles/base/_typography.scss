@@ -2,22 +2,19 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 body {
-    @include font-smoothing(on);
-    // background-color: $base-background-color;
-    color: $base-font-color;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    font-weight: 400;
-    line-height: $base-line-height;
-    -moz-font-feature-settings: 'liga', 'kern';
-    -moz-font-feature-settings:'liga=1, kern=1';
-    -ms-font-feature-settings:'liga', 'kern';
-    -o-font-feature-settings:'liga', 'kern';
-    -webkit-font-feature-settings:'liga', 'kern';
-    font-feature-settings: 'liga', 'kern';
+  // @include font-smoothing(on);
+  // background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: $base-line-height;
+  @include font-feature-settings("liga", "kern");
+
   &.ci2008 {
     background-image: url('../images/blue-texture.png');
   }
+
   &.ci2013 {
     background-image: url('../images/ci2013-bg.jpg');
     background-size: cover;
@@ -26,6 +23,7 @@ body {
       background-attachment: fixed;
     }
   }
+
   &#tinymce {
     background-image: none;
   }

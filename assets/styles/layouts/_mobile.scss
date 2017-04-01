@@ -54,6 +54,11 @@
       }
     }
 
+    &.home .main {
+      @include shift(2.5);
+      @include span-columns(3.5);
+    }
+
     &.home form .icon {
       margin-right: 0;
       width: 40px;      // Magic

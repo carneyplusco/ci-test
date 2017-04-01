@@ -38,6 +38,13 @@ import Party from './es-client';
 
         Underliner.init();
 
+        $('.mobile-nav-link').click(function(e) {
+          e.preventDefault();
+          $(this).toggleClass('open');
+          $('.mobile-nav').toggle($(this).is('.open'));
+          $('.main-footer').toggle(!$(this).is('.open'));
+        })
+
         $('figure a').featherlight({
           closeOnClick: 'anywhere',
           closeSpeed: 0,
