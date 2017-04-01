@@ -1,6 +1,8 @@
 header {
-  margin-bottom: $medium-spacing;
-  overflow: hidden;
+  @include media($small) {
+    margin-bottom: $medium-spacing;
+    overflow: hidden;
+  }
 
   .logotype {
     @include span-columns(2);
