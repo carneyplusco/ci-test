@@ -42,7 +42,6 @@ import Party from './es-client';
           e.preventDefault();
           $(this).toggleClass('open');
           $('.mobile-nav').toggle($(this).is('.open'));
-          $('.main-footer').toggle(!$(this).is('.open'));
         })
 
         $('figure a').featherlight({

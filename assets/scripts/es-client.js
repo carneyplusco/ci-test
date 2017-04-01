@@ -22,7 +22,7 @@ const Party = (function($) {
       host: esclient.es_host
     });
 
-    var query = $('.search-form').find('input').val();
+    var query = $('#party-search-field').val();
 
     // If not search results page, redirect
     // If search results page, call query with pagination enabled
