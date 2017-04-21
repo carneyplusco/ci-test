@@ -1,4 +1,4 @@
-<section class="page-content">
+<section class="page-content article-list">
   <article <?php post_class('article-item'); ?>>
     <div class="entry-content">
       <?php the_content(); ?>

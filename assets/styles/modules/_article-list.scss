@@ -1,9 +1,12 @@
 .article-list {
+    margin-bottom: $large-spacing;
+    overflow: auto;
+
   &__section-number {
     position: absolute;
   }
   &.-participants {
-    margin-bottom: $base-spacing;
+    margin-bottom: $large-spacing;
   }
 }
 
