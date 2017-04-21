@@ -15,7 +15,11 @@
         $excerpt = $p->excerpt.' <a class="moretag" href="'. $p->url . '">Read more <span class="screen-reader-text">about ' . $p->name . '</span></a>';
         $time_location = $date->format("g a");
         if(count($p->locations)) {
-          $time_location .= ", ".implode($p->locations, ', ');
+          $location_names = array_map(function($location) {
+            return $location->name;
+          }, $p->locations);
+
+          $time_location .= ", ".implode($location_names, ', ');
         }
         elseif(!empty($p->building_location)) {
           $time_location .= ", ".$p->building_location;
