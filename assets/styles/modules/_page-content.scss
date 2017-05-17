@@ -7,6 +7,10 @@
   }
 
   &__body {
-    margin-left: 50px;
+    margin-left: 70px;
+
+    @include media($extra-small) {
+      margin-left: 60px;
+    }
   }
 }

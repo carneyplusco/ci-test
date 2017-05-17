@@ -1,9 +1,10 @@
 .search-form {
   position: relative;
-  margin-left: 50px;
+  margin-left: 70px;
   max-width: 50%;
   border: 1px solid $medium-gray;
   @include media($small) {
+    margin-left: 60px;
     max-width: none;
   }
 

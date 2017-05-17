@@ -60,8 +60,12 @@ main {
 }
 
 .past-events {
-  margin-left: 50px;
+  margin-left: 70px;
   text-transform: uppercase;
+
+  @include media($extra-small) {
+    margin-left: 60px;
+  }
 }
 
 .programs .article-item {
