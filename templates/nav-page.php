@@ -7,6 +7,5 @@
     ?>
   </nav>
 
-  <span class="section-number"><i class="icon-search"></i></span>
   <?php get_search_form(); ?>
 </div>

@@ -108,11 +108,11 @@ select {
 
 // typewriter themed search input
 input[type="search"] {
-  background: none;
+  background: #fff;
   border: none;
   display: inline-block;
   margin-bottom: 0;
-  padding: 2px 0 10px 0;
+  padding: 5px 20px 4px 4px;
   outline: none;
 
   &:hover { cursor: pointer; }

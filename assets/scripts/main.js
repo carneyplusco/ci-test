@@ -49,6 +49,10 @@ import Party from './es-client';
           closeSpeed: 0,
           openSpeed: 0
         });
+
+        $('.search-form .icon-search').click(function() {
+          $(this).closest('form').submit();
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

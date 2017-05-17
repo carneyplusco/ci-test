@@ -6,7 +6,6 @@
 </section>
 
 <section class="page-header">
-  <span class="section-number"><i class="icon-search"></i></span>
   <?php get_search_form(); ?>
 </section>
 
