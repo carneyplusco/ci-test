@@ -6,7 +6,7 @@
     margin-bottom: 0;
     text-transform: uppercase;
     a {
-      margin-left: 40px;
+      margin-left: 30px;
       @include media($extra-small) {
         margin-left: 1rem;
       }
@@ -20,7 +20,7 @@
   &__link {
     position: relative;
     &.-previous, &.-next {
-      margin-left: 70px;
+      margin-left: 60px;
       text-transform: uppercase;
 
       @include media($extra-small) {

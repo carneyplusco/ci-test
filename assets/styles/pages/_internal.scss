@@ -49,6 +49,7 @@ main {
 
 .section-number {
   position: absolute;
+  letter-spacing: -2px;
 }
 
 .reading {
@@ -60,7 +61,7 @@ main {
 }
 
 .past-events {
-  margin-left: 70px;
+  margin-left: 60px;
   text-transform: uppercase;
 
   @include media($extra-small) {

@@ -3,7 +3,7 @@
   overflow: hidden;
   &__title {
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 60px;
 
     @include media($extra-small) {
       margin-left: 60px;
