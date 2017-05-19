@@ -6,7 +6,7 @@
     margin-bottom: 0;
     text-transform: uppercase;
     a {
-      margin-left: 1.5rem;
+      margin-left: 19px;
       @include media($extra-small) {
         margin-left: 1rem;
       }
@@ -15,6 +15,7 @@
 }
 
 .post-nav {
+  margin-bottom: $base-spacing;
   clear: both;
   &__link {
     position: relative;
@@ -26,7 +27,7 @@
 }
 
 .page-nav {
-  // padding-top: $medium-spacing;
+  max-width: 75%;
   clear: both;
   @include media($extra-small) {
     display: none;

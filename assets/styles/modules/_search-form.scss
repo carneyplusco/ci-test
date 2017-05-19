@@ -1,8 +1,16 @@
 .search-form {
+  position: relative;
   margin-left: 50px;
   max-width: 50%;
+  border: 1px solid $medium-gray;
   @include media($small) {
     max-width: none;
+  }
+
+  .icon-search {
+    position: absolute;
+    top: 5px;
+    right: 6px;
   }
 }
 

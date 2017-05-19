@@ -40,7 +40,6 @@
 
   .search-form {
     float: left;
-    margin-left: 54px;
     @include media($extra-small) {
       margin-left: 39px;
     }
