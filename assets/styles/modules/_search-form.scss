@@ -1,9 +1,10 @@
 .search-form {
   position: relative;
-  margin-left: 50px;
+  margin-left: 62px;
   max-width: 50%;
   border: 1px solid $medium-gray;
   @include media($small) {
+    margin-left: 60px;
     max-width: none;
   }
 
@@ -15,7 +16,7 @@
 }
 
 .mobile-nav .search-form {
-  margin-left: 39px;
+  margin-left: 40px;
 }
 
 input[type="search"]:focus::-webkit-input-placeholder {

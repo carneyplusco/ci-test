@@ -2,6 +2,9 @@
   use Roots\Sage\Extras;
   $category = get_the_category()[0];
   $category_number = Extras\menu_number('Home Nav', $category->name);
+  $category_posts = get_posts(['numberposts' => -1, 'category' => $category->cat_ID]);
+  $index = array_search($post, $category_posts);
+  $post_index = $index !== FALSE ? $category->category_count - $index : 1;
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
@@ -14,7 +17,7 @@
   <section class="page-content">
     <!-- Fix: update count to get the article’s position in the list view -->
     <?php $count = $category->category_count; ?>
-    <span class="section-number"><?= $category_number .'.'. $count-- ?></span>
+    <span class="section-number"><?= $category_number .'.'. $post_index ?></span>
     <article <?php post_class('article-item'); ?>>
       <h2 class="article-item__title"><?php the_title(); ?></h2>
       <h3 class="article-item__date"><?php the_date("d M Y"); ?></h2>

@@ -3,7 +3,12 @@
   overflow: hidden;
   &__title {
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 60px;
+
+    @include media($extra-small) {
+      margin-left: 60px;
+    }
+
     &.underline {
       margin-bottom: $small-spacing;
       @extend %dash-underline;

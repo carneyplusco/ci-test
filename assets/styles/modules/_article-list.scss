@@ -4,15 +4,21 @@
 
   &__section-number {
     position: absolute;
+    letter-spacing: -2px;
   }
+
   &.-participants {
     margin-bottom: $large-spacing;
   }
 }
 
 .article-item {
-  margin-left: 50px;
+  margin-left: 60px;
   margin-bottom: $base-spacing;
+
+  @include media($extra-small) {
+    margin-left: 60px;
+  }
 
   &__date {
     margin-bottom: $base-spacing;
@@ -34,7 +40,11 @@
 }
 
 .article-image, .article-link {
-  margin-left: 50px;
+  margin-left: 60px;
+
+  @include media($extra-small) {
+    margin-left: 60px;
+  }
 }
 
 .article-image {

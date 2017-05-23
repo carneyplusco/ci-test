@@ -38,10 +38,15 @@
     display: none;
   }
 
+  .main-nav li a {
+    margin-left: 20px;
+  }
+
   .search-form {
     float: left;
+    margin-left: 52px;
     @include media($extra-small) {
-      margin-left: 39px;
+      margin-left: 44px;
     }
     @include media($extra-small) {
       float: none;
