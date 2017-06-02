@@ -93,6 +93,10 @@ function og_defaults($metas) {
     $metas['og:image'] = get_field('default_open_graph_image', 'option');
   }
 
+  if(is_front_page()) {
+    $metas['og:title'] = "Home";
+  }
+
   $metas['og:site_name'] = get_bloginfo('description');
 
   return $metas;
