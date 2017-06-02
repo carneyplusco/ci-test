@@ -73,3 +73,28 @@ function adjust_title($title) {
   return $title;
 }
 add_filter('document_title_parts',  __NAMESPACE__ . '\\adjust_title', 10);
+
+/**
+* Add Open Graph options page
+*/
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_sub_page(array(
+		'page_title' 	=> 'Open Graph Settings',
+		'menu_title'	=> 'Open Graph',
+		'parent_slug'	=> 'options-general.php',
+	));
+}
+
+/**
+* Set default open graph values
+*/
+function og_defaults($metas) {
+  if(!isset($metas['og:image'])) {
+    $metas['og:image'] = get_field('default_open_graph_image', 'option');
+  }
+
+  $metas['og:site_name'] = get_bloginfo('description');
+
+  return $metas;
+}
+add_filter('open_graph_protocol_metas',  __NAMESPACE__ . '\\og_defaults');
