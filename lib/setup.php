@@ -109,6 +109,7 @@ function assets() {
   // Not necessary if not searching WP posts
   wp_localize_script('sage/js', 'esclient', array(
     'es_host' => ES_HOST,
+    'credentials' => ES_CREDENTIALS,
     'template_dir' => get_template_directory_uri()
   ));
 }

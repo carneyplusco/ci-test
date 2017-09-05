@@ -19,7 +19,12 @@ const Party = (function($) {
 
     // ElasticSearch JQuery client
     var client = new $.es.Client({
-      host: esclient.es_host
+      host: {
+        protocol: 'https',
+        host: esclient.es_host,
+        port: 9243,
+        auth: esclient.credentials
+      }
     });
 
     var query = $('#party-search-field').val();
